@@ -1,0 +1,30 @@
+// 506. Relative Ranks
+
+// let score = [5,4,3,2,1]
+// Output: ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
+
+// let score = [10, 3, 8, 9, 4];
+// Output: ["Gold Medal", "5", "Bronze Medal", "Silver Medal", "4"];
+
+var findRelativeRanks = function (score) {
+  const sortedScore = score.sort((a, b) => b - a);
+  const res = [];
+
+  score.map((num) => {
+    console.log(num);
+    if (sortedScore.indexOf(num) == 0) {
+      res.push("Gold Medal");
+    } else if (sortedScore.indexOf(num) == 1) {
+      res.push("Silver Medal");
+    } else if (sortedScore.indexOf(num) == 2) {
+      res.push("Bronze Medal");
+    } else if (sortedScore.indexOf(num) == 3) {
+      res.push((4).toString());
+    } else {
+      res.push((5).toString());
+    }
+  });
+  return res;
+};
+
+console.log(findRelativeRanks(score));

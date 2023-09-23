@@ -1,0 +1,24 @@
+// 500. Keyboard Row
+let words = ["Hello", "Alaska", "Dad", "Peace"];
+Output: ["Alaska", "Dad"];
+
+let row1 = "qwertyuiop";
+let row2 = "asdfghjkl";
+let row3 = "zxcvbnm";
+
+function findWords(words) {
+  const finalArray = words.filter((word) => {
+    const singleWordArr = word.toLowerCase().split("");
+    console.log(singleWordArr);
+    let result =
+      singleWordArr.every((char) => row1.includes(char)) ||
+      singleWordArr.every((char) => row2.includes(char)) ||
+      singleWordArr.every((char) => row3.includes(char));
+    console.log(result);
+    return result;
+  });
+  // console.log(finalArray)
+  return finalArray;
+}
+
+console.log(findWords(words));

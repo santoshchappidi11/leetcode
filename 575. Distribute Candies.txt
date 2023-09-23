@@ -1,0 +1,13 @@
+575. Distribute Candies
+
+// -------------------------------------------->
+// Input: candyType = [1,1,2,3]
+// Output: 2
+
+// var distributeCandies = function(candyType) {
+//     let uniqueCandies = [...new Set(candyType)].length
+//     let DoctorSaidToEat =  candyType.length / 2
+//     return uniqueCandies >= DoctorSaidToEat ? DoctorSaidToEat: uniqueCandies
+// };
+
+// console.log(distributeCandies(candyType))

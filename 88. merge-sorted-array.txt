@@ -1,0 +1,31 @@
+let nums1 = []
+let nums2 = [1]
+
+let res = []
+
+function sort(nums1, nums2) {
+    for(let i=0; i<= nums1.length-1; i++){
+       if(nums1[i] == 0){
+           res.push()
+       } else{
+           res.push(nums1[i])
+       }
+    }
+    for(let j=0; j<= nums2.length-1; j++){
+       if(nums2[j] == 0){
+           res.push()
+       } else{
+           res.push(nums2[j])
+       }
+    }
+    return res
+}
+
+
+function sorted(res) {
+    let result = res.sort((a,b) => a-b)
+    return result
+}
+
+console.log(sort(nums1, nums2))
+console.log(sorted(res))
